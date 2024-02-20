@@ -29,3 +29,12 @@ Originally the game used to have a tower defense component to it, where you had 
 - First the system find the closest waypoint (red circle) from the recently spawned enemy
 - It then calculates the vectors of the ideal path (red line) from that point onwards, aswell as target vectors (green line) based on paralels and the enemy distance of the ideal path (red line)
 -  Enemies then continuously move towards the closest point of the next target vector (green line), until they cross it by either moving or getting pushed across it. They then continue doing this towards the next target vector (green line) until they reach the end of the ideal path
+
+# My responsibilities in this project included:
+- Horde Pathing
+- Custom Pooling
+- Weapons
+- Achievements
+- UI Programming
+- Balancing (during the second half of the project)
+- Level Design (during the second half of the project)
