@@ -1,6 +1,6 @@
 # ScrapFever
 <p align="center">
-    <img src="readme/Banner.PNG" alt="Scrap Fever Banner"><br>
+    <img src="readme/Banner.png" alt="Scrap Fever Banner"><br>
 </p>
 
 Scrap Fever was developed during my 3. Semester at the [S4G School for Games](https://www.school4games.net/) using C# and the Unity Engine. This project had quite a turbulent development with members leaving the team, multiple smaller and one major change in direction for both art and gamedesign. 
@@ -24,3 +24,8 @@ Clone this repository and open the project folder using at least Unity Version 2
   <img src="readme/Horde Pathing.gif"/>
   <img src="readme/PathingVisualization.PNG" /> 
 </p>
+
+Originally the game used to have a tower defense component to it, where you had to defend a energy generator instead of yourself. For this purpose I created a horde enemy pathing which needed to be easy to handle for designers and able to keep enemies as hordes, while being performance friendly. All the designers have to do is to define a set path based on waypoints, enemies would then move alongside this ideal path, without stepping directly on it. This feature required quite a bit of vector math, but in short the system works like this:
+- First the system find the closest waypoint (red circle) from the recently spawned enemy
+- It then calculates the vectors of the ideal path (red line) from that point onwards, aswell as target vectors (green line) based on paralels and the enemy distance of the ideal path (red line)
+-  Enemies then continuously move towards the closest point of the next target vector (green line), until they cross it by either moving or getting pushed across it. They then continue doing this towards the next target vector (green line) until they reach the end of the ideal path
