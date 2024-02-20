@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/StartMenu.unity
+    guid: f102032c0e46c5840adf7c2b5d79b98b
+  - enabled: 0
+    path: Assets/Scenes/Bastian.unity
+    guid: f832195f46b6ddd4cb99ec85fd00b3a9
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 0
+    path: Assets/Scenes/Benchmarks/Benchmark Movement.unity
+    guid: 221b275f6ca5d554fa094623b8b36b1f
+  - enabled: 0
+    path: Assets/Scenes/Maps/Map1.unity
+    guid: 4b5b377bedc19fb43bd158d624f7b5cb
+  - enabled: 0
+    path: Assets/Scenes/Maps/Test Scrolling.unity
+    guid: e9aa095bc01df7e408b7168e026b8c24
+  - enabled: 0
+    path: Assets/Scenes/Maps/GameMap.unity
+    guid: 509eefd3e658b654db634e4506a0b0c4
+  - enabled: 1
+    path: Assets/Scenes/VampireSurvivors.unity
+    guid: 8d1da0684a1f86d4b8e9db16227f8ac3
+  - enabled: 1
+    path: Assets/Scenes/Ben.unity
+    guid: 24706814b400b86439453c822e0e702d
+  m_configObjects:
+    com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000,
+      guid: ad1789e5f4a04f24a96f5d302d95fdc4, type: 2}
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 6111d826c0318f74f83b9c5ae30d3475,
+      type: 2}
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000,
+      guid: a8acd491144b19741871f9dc4a87cbe5, type: 2}
+    com.unity.input.settings: {fileID: 11400000, guid: b52f78cf2bc036c43bc1276272d31fc8,
+      type: 2}

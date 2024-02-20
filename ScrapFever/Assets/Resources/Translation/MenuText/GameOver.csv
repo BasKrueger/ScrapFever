@@ -1,0 +1,18 @@
+Names,DE,EN,FR
+GlueGameOver,Game Over,Game Over,xxx
+GlueReturnToMainMenu,Zurück zum Hauptmenü,Return to main menu,xxx
+GlueRestart,Neustart,Restart,xxx
+GlueMainMenu,Hauptmenü,Main Menu,xxx
+GlueYouDied,Verschrottet!,SCRAPPED!,xxx
+GlueBaseDestroyed,BOMBE ZERSTÖRT!,BOMB DESTROYED!,xxx
+GlueContent1,Du hast XXX Bots verschrottet//. bist aber tragischerweise im Kampf gestorben.,You have destroyed XXX bots but tragically died in battle.,xxx
+GlueContent2,Du hast XXX Bots verschrottet//. aber vergessen//. die XXX zu sch�tzen.,You have destroyed XXX bots but forgot to protect the XXX.,xxx
+,,,
+GlueGameTime,Spielzeit: <m1>,Gametime: <m1>,xxx
+GlueKillCount,Besiegte Gegner: <m1>,Defeated Enemies <m1>,xxx
+GlueKrystalCount,Aufgesammelte Kristalle: <m1>,Collected Crystals: <m1>,xxx
+GlueDamageDone,Verursachter Schaden: <m1>,Damage Dealt: <m1>,xxx
+GlueDamageTaken,Genommener Schaden: <m1>,Damage Taken: <m1>,xxx
+,,,
+GlueNoAchivementsCompleted,Keine Erfolge abgeschlossen,No Achievements Completed,xxx
+GlueVictory,Gewonnen,Victory,xxx

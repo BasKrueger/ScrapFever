@@ -1,0 +1,58 @@
+Names,DE,EN,FR
+GlueControls,Steuerung,Controls,XXX
+GlueMove,Bewegen,Move,xxx
+GlueWeapons,Waffen,Weapons,xxx
+GlueInteract,Interagieren,Interact,xxx
+,,,
+GlueGameplay,Gameplay,Gameplay,XXX
+GlueLanguage,Sprache,Language,XXX
+GlueTutorials,Hilfestellungen,Tutorials,XXX
+GlueDeleteSave,Speicherstand löschen,Delete Save,XXX
+,,,
+GlueEnglish,Englisch,English,xxx
+GlueGerman,Deutsch,German,xxx
+,,,
+GlueGraphics,Grafik,Graphics,XXX
+GlueBrightness,Helligkeit,Brightness,XXX
+GlueDisplayMode,Anzeigemodus,ScreenMode,XXX
+GlueResolution,Auflösung,Resolution,XXX
+GlueQuality,Qualität,Quality,XXX
+GlueVSync,Vsync,Vsync,XXX
+,,,
+GlueAudio,Audio,Audio,XXX
+GlueTotalVolume,Gesamtlautstärke,Master Volume,XXX
+GlueMusic,Musik,Music,XXX
+GlueEffects,Effekte,Effects,XXX
+,,,
+,,,
+GlueOn,An,On,xxx
+GlueOff,Aus,Off,xxx
+GlueDelete,Löschen,Delete,xxx
+,,,
+GlueDeleteConfirmation,Bist du sicher das du die Einstellungenauf ihre Startwerte zurücksetzen möchtest?,Are you sure that you want to reset the settings to their default values?,xxx
+,,,
+GlueWindowed,Fenster,Windowed,xxx
+GlueFullscreen,Vollbild,Fullscreen,xxx
+GlueBorderless,Randlos,Borderless,xxx
+,,,
+GlueHigh,Hoch,High,xxx
+GlueMedium,Mittel,Medium,xxx
+GlueLow,Niedrig,Low,xxx
+,,,
+GlueReset,Zurücksetzen,Reset,xxx
+GlueApply,Anwenden,Apply,xxx
+UnsaveConfirmation,Sicher das du die Einstellungen verlassen möchtest? Jede ungespeicherte Änderung geht verloren.,Are you sure that you want to leave the settings? Any unsaved changes will get lost.,xxx
+GlueResolutionConfirmation,Auflösung wird in <m1> Sekunden automatisch zurückgesetzt. Möchtest du diese Auflösung behalten?,Resolution automatically resets in <m1> seconds. Do you want to keep this resolution?,xxx
+GlueFullscreen,Vollbild,Fullscreen,xxx
+GlueBorderless,Randlos,Borderless,xxx
+,,,
+GlueHigh,Hoch,High,xxx
+GlueMedium,Mittel,Medium,xxx
+GlueLow,Niedrig,Low,xxx
+,,,
+GlueReset,Zurücksetzen,Reset,xxx
+GlueApply,Anwenden,Apply,xxx
+UnsaveConfirmation,Sicher das du die Einstellungen verlassen möchtest? Jede ungespeicherte Änderung geht verloren.,Are you sure that you want to leave the settings? Any unsaved changes will get lost.,xxx
+GlueResolutionConfirmation,Auflösung wird in <m1> Sekunden automatisch zurückgesetzt. Möchtest du diese Auflösung behalten?,Resolution automatically resets in <m1> seconds. Do you want to keep this resolution?,xxx
+,,,
+GlueMove,Bewegen,Move,xxx

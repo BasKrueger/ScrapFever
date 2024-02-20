@@ -1,0 +1,58 @@
+Names,DE,EN,FR
+GluePassive,Passiv,Passive,XXX
+,,,
+Ballista_Name,Elektrobolzen,Ballista,XXX
+Ballista_Description,Feuert einen mächtigen durchdringenden Elektrobolzen ab.,Fires a powerful piercing electric bolt,XXX
+,,,
+Books_Name,Elektrobibel,Electrobible,XXX
+Books_Description,Alle paar Sekunden umgeben dich elektrische Funken.,Electric sparks circle around you every couple seconds.,XXX
+,,,
+Catapult_Name,Gummigranate,Catapult,XXX
+Catapult_Description,Springende Geschosse //. welche bei jeder Landung schaden verursachen.,Throws jumping spike balls that deal damage whenever they touch the ground.,XXX
+,,,
+HeatRadiation_Name,Megaföhn,Heat Radiation,XXX
+HeatRadiation_Description,Glühende Hitze umgibt dich und fügt allen Gegnern Schaden zu.,Flaming hot heat radiates from you//. dealing damage to nearby enemies.,XXX
+,,,
+Knives_Name,Bleispritze,Pistol,XXX
+Knives_Description,Feuert Geschosse ab//. welche Gegner durchdringen.,Shoots piercing bullets.,XXX
+,,,
+Poison_Name,Säurebombe,Poison,XXX
+Poison_Description,Bildet  Giftlachen//. die Gegnern Schaden zufügen,Throws a bottle of poison//. that leave a poisonous puddle behind.,XXX
+,,,
+ScatterBomb_Name,Schrapnellbombe,Scatterbomb,XXX
+ScatterBomb_Description,Explodiert in der Luft und lässt Kugeln regnen.,Throws a bomb that explodes in the air//. while shooting smaller projectiles towards the ground.,XXX
+,,,
+Scythe_Name,Lichtschwert,Lightsword,XXX
+Scythe_Description,Schwingt ein mächtiges Lichtschwert vor dich.,Swings a slow but powerfull lightsword in front of you.,XXX
+,,,
+Shotgun_Name,Schrottflinte,Shotgun,XXX
+Shotgun_Description,Feuert mehrere Kugeln gleichzeitig. Besonders effektiv auf kurzer Entfernung.,Fires multiple bullets at once. Especially effective in short range.,XXX
+,,,
+Tesla_Name,Tesla,Tesla,XXX
+Tesla_Description,Feuert elektrische Funken//. welche zwischen Gegnern hin und her springen.,Fires electric sparks that bounce between enemies.,XXX
+,,,
+,,,
+Stats,,,
+GlueBonusDamage,Schaden,Damage,
+GlueBonusFireRate,Feuerrate,FireRate,
+,,,
+,,,
+GlueBounces,Sprünge,Bounces,xxx
+GlueSwingDuration,Schwingdauer,swing duration,xxx
+GlueExplosionRange,Explosionsradius,explosionrange,xxx
+GlueRangeUntilExplosion,Dauer bis zur Explosion,duration until explosion,xxx
+,,,
+GluePuddleSize,Pfützengröße,puddlesize,xxx
+GluePoisonDamageRate,Schadensrate,damagerate,xxx
+GluePuddleDuration,Pfützendauer,puddleduration,
+,,,
+GlueRange,Reichweite,Range,xxx
+GlueBounceDistance,Sprungreichweite,bouncerange,xxx
+,,,
+GlueSpinDuration,Wirbeldauer,spinduration,xxx
+GlueBookRange,Reichweite,range,xxx
+GlueSpeed,Geschwindigkeit,speed,xxx
+,,,
+GlueScatterCount,Explosionsprojektile,Explosionprojectiles,xxx
+GlueExplosionRange,Explosionsrgröße,Explosionrange,xxx
+GlueRangeUntilExplosion,Reichweite bis zur Explosion,Reichweite bis zur Explosion,xxx

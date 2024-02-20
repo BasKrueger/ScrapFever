@@ -1,0 +1,33 @@
+Names,DE,EN,FR,
+,,,,
+Glue_Easy,Einfach,Easy,XXX,
+Glue_Medium,Mittel,Medium,XXX,
+Glue_Hard,Hart,Hard,XXX,
+,,,,
+,,,,
+GlueAchivements,Errungenschaften,Achivements,xxx,
+GlueBack,zurück,back,xxx,
+,,,,
+Glue%,<m1>%,<m1>%,xxx,ex: 12% (twelve percent)
+,,,,
+Objective_Kill_Name,Zerstöre <m1> Gegner : <m2>,Destroy <m1> Enemies: <m2>,xxx,ex: Destroy basic enemies: hard
+Objective_Kill_Description,Zerstöre <m1> Gegner von der Art <m2> (<m3> übrig),Destroy <m1> enemies of the kind: <m2> (<m3> left),xxx,ex: Destroy 12.00 enemies of the kind: basic
+,,,,
+Objective_Damage_Name,Meisterschaft <m1> : <m2>,Mastery <m1> : <m2>,xxx,ex: Mastery Tesla: medium
+Objective_Damage_Description,Verursache <m1> schaden mit <m2> (<m3> übrig),Deal <m1> damage with <m2> (<m3> left),xxx,ex: Deal 12.000 damage with Tesla (1.200 left)
+,,,,
+Objective_Time_Name,Spielzeit: <m1>,Gametime: <m1>,xxx,
+Objective_Time_Description,Überlebe eine Gesamtzeit von <m1> Sekunden (<m2> Sekunden übrig),Survive a total of <m1> seconds (<m2> seconds left),xxx,
+,,,,
+Objective_TotalDamage_Name,Gesamtschaden : <m1>,Total damage : <m1>,xxx,
+Objective_TotalDamage_Description,Verursache ingesammt <m1> Schaden an Gegnern (<m2> schaden übrig),Deal a total of <m1> damage to enemies (<m2> damage left),xxx,
+,,,,
+Objective_Survive_Name,Überleben: <m1>,Survive: <m1>,xxx,
+Objective_Survive_Description,Erleide insgesamt <m1> schaden ohne zu sterben. (<m2>übrig),Take a total of <m1> damage without dying.(<m2> left),xxx,
+,,,,
+GlueKillAchivements,Besiege Gegner,Defeat Enemies,xxx,
+GlueDamageAchivements,Waffenmeisterungen,Weapon Masteries,xxx,
+GlueOtherAchievements,Andere,Other,xxx,
+,,,,
+ObjectiveMaxLevel_Name,Aufleveln: <m1>,Level Up : <m1>,xxx,
+ObjectiveMaxLevel_Description,Erreiche ein neues Level <m1> mal (<m2> übrig),Reach a new Level <m1> times (<m2> left),xxx,

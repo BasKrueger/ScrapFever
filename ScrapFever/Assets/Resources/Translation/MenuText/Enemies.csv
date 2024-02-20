@@ -1,0 +1,31 @@
+Names,DE,EN,FR
+,,,
+GlueEnemyA_V1_Name,Moskito-Drone,Stinger-Drone,XXX
+GlueEnemyA_V1_Description,Standard Gegner mit wenig Leben. Stechen gerne mal zu.,Basic enemies with low health. Love to sting you.,xxx
+,,,
+GlueEnemyA_V2_Name,Daniilomat,Daniilomat,XXX
+GlueEnemyA_V2_Description,Laufende Tanks. Langsam //. aber halten sehr viel aus.,Walking Tanks. Slow //. but they can take a lot of hits.,xxx
+,,,
+GlueEnemyA_V3_Name,Bentator,Bentator,XXX
+GlueEnemyA_V3_Description,Eine wandelnde Festung //. an der man sich die Zähne ausbeisen kann.,A walking fortress with a collosal amount of health.,xxx
+,,,
+GlueEnemyB_V1_Name,Jet-Drone,Jet-Drone,XXX
+GlueEnemyB_V1_Description,Schneller als Moskito-Dronen dank ihres Düsenantriebes.,Faster than Stinger-Drones //. thanks to their jet engines.,
+,,,
+GlueEnemyB_V2_Name,Hochleistungsrechner,High performance Computer,XXX
+GlueEnemyB_V2_Description,Super schnell dank ihrer schnellen Rechenleistung.,Super fast thanks to their strong CPU.,xxx
+,,,
+GlueEnemyB_V3_Name,Quantencomputer,Quantum Computer,XXX
+GlueEnemyB_V3_Description,Mehr Leistung und Düsenantriebe als jeder andere Gegner. Viel glück beim Wegrennen.,Higher performance and more jet engines than any other enemy. Good luck trying to outrun this enemy.,xxx
+,,,
+GlueFireball_Name,Feuerball,Fireball,xxx
+GlueFireball_Description,Ein rollender Feuerball der alles auf seinem Weg zerstört.,A rolling fireball that destroys everything in his path.,xxx
+,,,
+GlueLateBoomer_Name,Spätzünder,Lateboomer,xxx
+GlueLateBoomer_Description,Eine scheue Bombe die man nur spät zu gesicht bekommt. Geht gerne mal in die Luft.,A shy bomb that you will only find after quite a while. Blows up easily.,xxx
+,,,
+GlueContainer_Name,Container,Container,xxx
+GlueContainer_Description,Warum dich ein Container angreift? Er ist aggressiv!,Why a container is supposed to attack you? He is aggressive!,xxx
+,,,
+GlueLantern_Name,Laterne,Lantern,xxx
+GlueLantern_Description,Nur eine gewöhnlich Laterne ... oder etwa doch nicht?,Just an ordinary Lantern... or maybe not?,xxx

@@ -1,0 +1,12 @@
+Names,DE,EN,FR
+GlueYes,Ja,Yes,XXX
+GlueNo,Nein,No,XXX
+,,,
+Names,DE,EN,xxx
+GlueYes,Ja,Yes,xxx
+GlueNo,Nein,No,xxx
+GlueBack,Zurück,Back,xxx
+GlueExitGame,Möchtest du wirklich das Spiel beenden?,Do you really want to exit the game?,xxx
+GlueBackToMain,Möchtest du wirklich zurück in das Hauptmenü?,Do you really want to go back to the main menu?,xxx
+GlueSaveReminder,Möchtest du wirklich die Einstellungen verlassen ohne sie zu speichern?,Do you really want to exit the settings without saving them?,xxx
+GlueResetSettings,Möchtest du wirklich alle Einstellungen zurücksetzen?,Do you really want to reset all settings?,xxx
