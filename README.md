@@ -9,7 +9,7 @@ Scrap Fever was developed during my 3. Semester at the [S4G School for Games](ht
 
 https://github.com/BasKrueger/ScrapFever/assets/147401575/f4464f64-03d1-4a6e-9401-09cc836a0a09
 
-Scrap Fever is a futuristic Survivor-Like set in a magma cave where runs only last 6 extremely varied minutes. You play as a robot with weapons that automatically fire at the next enemy. Defeated enemies leave crystals behind, collect enough of them to either get a new or unlock a completely new weapon. Combining lightning fast reflexes with strategically picking the correct upgrades is key to surviving these intense 6 Minutes.
+Scrap Fever is a futuristic Survivor-Like set in a magma cave where runs only last 6 extremely varied minutes. You play as a robot with weapons that automatically fire at the next enemy. Defeated enemies leave crystals behind, collect enough of them to either upgrade or get a new or unlock a completely new weapon. Combining lightning fast reflexes with strategically picking the correct upgrades is key to surviving these intense 6 Minutes.
 Features include:
   - 10 different weapons
   - 3 Bosses with unique mechanics
