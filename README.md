@@ -21,7 +21,6 @@ Clone this repository and open the project folder using at least Unity Version 2
 
 # Highlight: Horde pathing
 <p float="left">
-  <img src="/img1.png" width="100" />
-  <img src="/img2.png" width="100" /> 
-  <img src="/img3.png" width="100" />
+  <img src="readme/Horde Pathing.gif"/>
+  <img src="readme/PathingVisualization.PNG" /> 
 </p>
