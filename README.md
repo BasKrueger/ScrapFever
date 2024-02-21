@@ -3,7 +3,7 @@
     <img src="readme/Banner.png" alt="Scrap Fever Banner"><br>
 </p>
 
-Scrap Fever was developed during my 3. Semester at the [S4G School for Games](https://www.school4games.net/) using C# and the Unity Engine. This project had quite a turbulent development with members leaving the team, multiple smaller and one major change in direction for both art and gamedesign. 
+Scrap Fever was developed during my <b> 3. Semester </b> at the [S4G School for Games](https://www.school4games.net/) using C# and the Unity Engine. This project had quite a turbulent development with members leaving the team, multiple smaller and one major change in direction for both art and gamedesign. 
 
 # Gameplay
 
@@ -31,10 +31,10 @@ Originally the game used to have a tower defense component to it, where you had 
 -  Enemies then continuously move towards the closest point of the next target vector (green line), until they cross it by either moving or getting pushed across it. They then continue doing this towards the next target vector (green line) until they reach the end of the ideal path
 
 # My responsibilities in this project included:
-- Horde Pathing
-- Custom Pooling
-- Weapons
-- Achievements
+- (Horde Pathing)[https://github.com/BasKrueger/ScrapFever/blob/main/ScrapFever/Assets/Scripts/Enemy/Navigation/PathingBrain.cs]
+- (Custom Pooling)[https://github.com/BasKrueger/ScrapFever/blob/main/ScrapFever/Assets/Scripts/General/Pooling/Pool.cs]
+- (Weapons)[https://github.com/BasKrueger/ScrapFever/blob/main/ScrapFever/Assets/Scripts/Player/Weapons/AbstractWeapon.cs#L174]
+- (Achievements)[https://github.com/BasKrueger/ScrapFever/tree/main/ScrapFever/Assets/Scripts/Achivements]
 - UI Programming
 - Balancing (during the second half of the project)
 - Level Design (during the second half of the project)
