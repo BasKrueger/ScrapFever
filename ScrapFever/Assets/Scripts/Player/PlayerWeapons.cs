@@ -24,7 +24,7 @@ public class PlayerWeapons
     [FoldoutGroup("References"), SerializeField]
     private Transform weaponHolder;
     [FoldoutGroup("References"), SerializeField]
-    private InventoryUI ui;
+    private InventoryUI weaponUI;
     [FoldoutGroup("References"), SerializeField]
     private WeaponUnlockCanvas worldUI;
 
@@ -38,7 +38,7 @@ public class PlayerWeapons
 
     public void SetUp()
     {
-        ui.SetUp(abilitySlots);
+        weaponUI.SetUp(abilitySlots);
 
         if(startingWeapon == null)
         {
@@ -52,34 +52,24 @@ public class PlayerWeapons
 
     public void LevelUp()
     {
-        StartCoroutine(delay());
+        var offers = GetLevelUpOffers();
+        if (offers.Count <= 0) return;
 
-        IEnumerator delay()
+        weaponUI.unlockWindow.upgradeSelected += OnUpgradeSelected;
+        weaponUI.unlockWindow.DisplayOffers(offers);
+    }
+
+    private void OnUpgradeSelected(UpgradeInformation info)
+    {
+        weaponUI.unlockWindow.upgradeSelected -= OnUpgradeSelected;
+
+        if (info.isUpgrade)
         {
-            yield return new WaitForEndOfFrame();
-            List<(AbstractWeapon weapon, bool isUpgrade)> offers = GetLevelUpOffers();
-            if (offers.Count <= 0) yield break;
-
-            int selectedUpgrade = -1;
-            ui.unlockWindow.upgradeSelected += (int value) => selectedUpgrade = value;
-            ui.unlockWindow.DisplayUpgrades(offers);
-
-            Time.timeScale = 0;
-            while (selectedUpgrade < 0)
-            {
-                yield return new WaitForEndOfFrame();
-            }
-            Time.timeScale = 1;
-
-            var selected = offers[selectedUpgrade];
-            if (selected.isUpgrade)
-            {
-                selected.weapon.Upgrade();
-            }
-            else
-            {
-                AddWeapon(selected.weapon);
-            }
+            info.weapon.Upgrade();
+        }
+        else
+        {
+            AddWeapon(info.weapon);
         }
     }
 
@@ -108,14 +98,14 @@ public class PlayerWeapons
 
             activeWeapons.TryReplaceFirst(null, weapon);
 
-            ui.activeWeapons.AddWeapon(weapon, activeWeapons.IndexOf(weapon));
+            weaponUI.activeWeapons.AddWeapon(weapon, activeWeapons.IndexOf(weapon));
             worldUI.Show(weapon);
 
             unObtainedWeapons.Remove(template);
         }
     }
 
-    private List<(AbstractWeapon, bool)> GetLevelUpOffers()
+    private List<UpgradeInformation> GetLevelUpOffers()
     {
         var allOptions = new List<AbstractWeapon>();
         
@@ -132,16 +122,23 @@ public class PlayerWeapons
             allOptions.AddRange(unObtainedWeapons);
         }
 
-        List<(AbstractWeapon weapon, bool isUpgrade)> offers = new List<(AbstractWeapon weapons, bool isUpgrade)>();
+        List<UpgradeInformation> offers = new List<UpgradeInformation>();
         for (int i = 0; i < 2 && allOptions.Count > 0; i++)
         {
-            var weapon = allOptions.GetRandom();
-            var isUpgrade = activeWeapons.Contains(weapon) && !weapon.IsMaxed();
+            var upgradeOption = new UpgradeInformation();
+            upgradeOption.weapon = allOptions.GetRandom();
+            upgradeOption.isUpgrade = activeWeapons.Contains(upgradeOption.weapon) && !upgradeOption.weapon.IsMaxed();
 
-            offers.Add((weapon, isUpgrade));
-            allOptions.Remove(weapon);
+            offers.Add(upgradeOption);
+            allOptions.Remove(upgradeOption.weapon);
         }
 
         return offers;
     }
+}
+
+public struct UpgradeInformation
+{
+    public AbstractWeapon weapon;
+    public bool isUpgrade;
 }

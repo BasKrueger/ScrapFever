@@ -32,7 +32,7 @@ public class UpgradeWrapper
     [field: SerializeField, SuffixLabel("shots per seconds", true), FoldoutGroup("Generic")]
     public float bonusFireRate { get; private set; }
 
-    [SerializeField, LabelText("Specific"), ShowIf("HasGenericUpgrades"), ListDrawerSettings(HideAddButton = true, HideRemoveButton = true)]
+    [SerializeField, LabelText("Specific"), ShowIf("HasSpecificUpgrades"), ListDrawerSettings(HideAddButton = true, HideRemoveButton = true)]
     private List<SpecificUpgrade> specificUpgrades;
 
     public void SetUp(List<string> content)

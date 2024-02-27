@@ -64,6 +64,8 @@ public class EnemyNavigation
 
     private void UpdateMovementDirection(Vector3 from)
     {
+        if (speed == 0) return;
+
         if (overrideTarget != null)
         {
             movementDirection = (overrideTarget.position - from);

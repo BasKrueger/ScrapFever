@@ -3,12 +3,13 @@ using System.Collections.Generic;
 
 public static class AchivementManager 
 {
-    private static List<AbstractAchivement> achivements;
     public const string SEPERATOR = "___";
+
+    private static List<AbstractAchivement> achivements;
 
     public static List<AbstractAchivement> GetAchivements()
     {
-        if(achivements == null || achivements == new List<AbstractAchivement>())
+        if(achivements == null || achivements.Count == 0)
         {
             PopulateAchivements(out achivements);
         }
@@ -18,19 +19,13 @@ public static class AchivementManager
 
     public static void ProgressAchivement<T>(int value, object[] args = null) where T : AbstractAchivement
     {
-        if (achivements == null || achivements == new List<AbstractAchivement>())
-        {
-            PopulateAchivements(out achivements);
-        }
-
-        foreach (var achivement in achivements)
+        foreach (var achivement in GetAchivements())
         {
             if (achivement is not T) continue;
 
             achivement.TryProgress(value, args);
         }
     }
-
     private static void PopulateAchivements(out List<AbstractAchivement> result)
     {
         GameSaveFile gsf = new();

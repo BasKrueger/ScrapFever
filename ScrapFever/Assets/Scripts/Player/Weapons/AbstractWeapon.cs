@@ -19,10 +19,13 @@ public abstract class AbstractWeapon : MonoBehaviour, IDamageSource
     #region Settings
     [SerializeField, EnumToggleButtons, TabGroup("General")]
     private WeaponTargets targetMode;
+
     [SerializeField, TabGroup("General")]
     protected int damage = 1;
+
     [SerializeField, SuffixLabel("shots per Second", true), TabGroup("General")]
     protected float fireRate = 0.25f;
+
     [SerializeField, TabGroup("General"), LabelText("Line Of Sight")]
     private bool requiresLineOfSight = false;
 
@@ -30,28 +33,33 @@ public abstract class AbstractWeapon : MonoBehaviour, IDamageSource
     private List<WeaponUpgrade> upgrades;
     #endregion
 
-    #region Visuals
+
     [field: SerializeField, Required, PreviewField(ObjectFieldAlignment.Left), TabGroup("VFX & SFX"), PropertyOrder(1)]
     public Sprite sprite { get; private set; }
+
     [field: SerializeField, Required, PreviewField(ObjectFieldAlignment.Left), TabGroup("VFX & SFX"), PropertyOrder(1)]
     public VideoClip clip { get; private set; }
     
     [SerializeField, TabGroup("VFX & SFX"), PropertyOrder(1)]
     private AudioSource fireSFX;
+
     [SerializeField, TabGroup("VFX & SFX"), PropertyOrder(1)]
     private ParticleSystem particle;
+
     [SerializeField, TabGroup("VFX & SFX"), PropertyOrder(1)]
     private string weaponName;
-    [SerializeField, TabGroup("VFX & SFX"), PropertyOrder(1), FilePath(ParentFolder = "Assets/Resources", Extensions = ".csv", IncludeFileExtension = false, RequireExistingPath = true)]
+
+    [SerializeField, TabGroup("VFX & SFX"), PropertyOrder(1), 
+        FilePath(ParentFolder = "Assets/Resources", Extensions = ".csv", IncludeFileExtension = false, RequireExistingPath = true)]
     private string localizationPath;
-    #endregion
+
+    private WeaponUpgrade lastUpgrade;
+
+    protected float activeCooldown;
 
     public string Name { get { return CSVLanguageFileParser.GetLangDictionary(localizationPath, SelectedLanguage.value)[$"{weaponName}_Name"]; ; } }
     public string Description { get { return CSVLanguageFileParser.GetLangDictionary(localizationPath, SelectedLanguage.value)[$"{weaponName}_Description"]; ; } }
     public string glueSourceName => weaponName;
-
-    private WeaponUpgrade lastUpgrade;
-    protected float activeCooldown;
 
     private void Awake()
     {
@@ -90,6 +98,7 @@ public abstract class AbstractWeapon : MonoBehaviour, IDamageSource
 
         var lastIndex = upgrades.IndexOf(lastUpgrade);
         lastIndex++;
+
         if (lastIndex > upgrades.Count - 1) return null;
 
         return upgrades[lastIndex];

@@ -43,6 +43,7 @@ public class GameUI : MonoBehaviour
     {
         if (!pauseScreen.gameObject.activeInHierarchy)
         {
+            if (Time.timeScale == 0) return;
             pauseScreen.Show();
         }
         else

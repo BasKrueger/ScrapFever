@@ -5,48 +5,37 @@ using UnityEngine.EventSystems;
 
 public class WeaponUnlockWindow : MonoBehaviour
 {
-    public event Action<int> upgradeSelected;
-    private List<WeaponUpgradeCard> upgradeCards;
+    public event Action<UpgradeInformation> upgradeSelected;
 
-    public void DisplayUpgrades(List<(AbstractWeapon weapon, bool isUpgrade)> weapons)
+    private void Awake()
+    {
+        foreach (var upgradeCard in GetComponentsInChildren<WeaponUpgradeCard>())
+        {
+            upgradeCard.selected += OnCardSelected;
+        }
+    }
+
+    public void DisplayOffers(List<UpgradeInformation> infos)
     {
         EventSystem.current.SetSelectedGameObject(null);
 
-        upgradeCards = new List<WeaponUpgradeCard>();
-        foreach (var upgradeCard in GetComponentsInChildren<WeaponUpgradeCard>())
-        {
-            upgradeCards.Add(upgradeCard);
-            upgradeCard.selected += OnCardSelected;
-        }
+        var upgradeCards = GetComponentsInChildren<WeaponUpgradeCard>();
 
-        for (int i = 0;i < upgradeCards.Count; i++)
+        for (int i = 0; i< infos.Count && i < upgradeCards.Length; i++)
         {
-            if(i < weapons.Count)
-            {
-                if (weapons[i].isUpgrade)
-                {
-                    upgradeCards[i].ShowUpgrade(weapons[i].weapon);
-                }
-                else
-                {
-                    upgradeCards[i].ShowNewWeapon(weapons[i].weapon);
-                }
-            }
-            else
-            {
-                upgradeCards[i].Hide();
-            }
+            upgradeCards[i].Show(infos[i]);
         }
 
         Time.timeScale = 0;
         gameObject.SetActive(true);
     }
 
-    private void OnCardSelected(WeaponUpgradeCard selected)
+
+    private void OnCardSelected(UpgradeInformation selected)
     {
         Time.timeScale = 1;
         gameObject.SetActive(false);
 
-        upgradeSelected?.Invoke(upgradeCards.IndexOf(selected));
+        upgradeSelected?.Invoke(selected);
     }
 }

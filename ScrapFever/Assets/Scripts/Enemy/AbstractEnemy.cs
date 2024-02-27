@@ -9,17 +9,18 @@ public abstract class AbstractEnemy : MonoBehaviour, IPoolable, IDamageAble, IDa
     public event Action<AbstractEnemy> died;
     public event Action<AbstractEnemy> outOfScreen;
 
-    const float rotationSpeed = 10;
-    const int maxCrystals = 125;
+    const float ROTATIONSPEED = 10;
 
     [SerializeField, FoldoutGroup("Settings")]
     protected FloatStat hp;
+
     [SerializeField, FoldoutGroup("Settings")]
     private float healthDropPercentChance = 0.01f;
 
     #region Component references
     [SerializeField]
     private EnemyNavigation navigation;
+
     [SerializeField]
     private EnemyVFX visuals;
 
@@ -66,8 +67,7 @@ public abstract class AbstractEnemy : MonoBehaviour, IPoolable, IDamageAble, IDa
         navigation.SetUp(transform.position);
         visuals.TryPlaySpawnAnimation(transform);
 
-
-        StartCoroutine(OutOfScreen());
+        StartCoroutine(ReturnIfOutOfScreen());
         InternalSetUp();
     }
 
@@ -75,12 +75,14 @@ public abstract class AbstractEnemy : MonoBehaviour, IPoolable, IDamageAble, IDa
     {
         if (rb == null || rb.isKinematic) return;
 
-        var dir = navigation.GetMovementDirection().normalized;
-        dir.y = 0;
+        var dir = navigation.GetMovementDirection();
         if (dir == new Vector3()) return;
+
+        dir.Normalize();
+        dir.y = 0;
         var rot = Quaternion.LookRotation(dir);
 
-        transform.rotation = Quaternion.Slerp(transform.rotation, rot, Time.deltaTime * rotationSpeed);
+        transform.rotation = Quaternion.Slerp(transform.rotation, rot, Time.deltaTime * ROTATIONSPEED);
     }
 
     private void FixedUpdate()
@@ -117,16 +119,7 @@ public abstract class AbstractEnemy : MonoBehaviour, IPoolable, IDamageAble, IDa
     {
         if (!this.gameObject.IsOnScreen(1)) return false;
 
-        var crystalsInWorld = Pool.GetOutOfPools<XPItem>();
-
-        if (crystalsInWorld.Count < maxCrystals)
-        {
-            DropItem("XP Item");
-        }
-        else
-        {
-            crystalsInWorld.GetRandom().GetComponent<XPItem>().IncreaseValue(1);
-        }
+        DropItem("XP Item");
 
         if (UnityEngine.Random.Range(0, 1f) < healthDropPercentChance)
         {
@@ -134,6 +127,7 @@ public abstract class AbstractEnemy : MonoBehaviour, IPoolable, IDamageAble, IDa
         }
 
         Die();
+
         return true;
     }
 
@@ -168,7 +162,7 @@ public abstract class AbstractEnemy : MonoBehaviour, IPoolable, IDamageAble, IDa
         item.transform.position = dropPos;
     }
 
-    private IEnumerator OutOfScreen()
+    private IEnumerator ReturnIfOutOfScreen()
     {
         while (true)
         {
@@ -198,13 +192,16 @@ public abstract class AbstractEnemy : MonoBehaviour, IPoolable, IDamageAble, IDa
     #region IPoolable
     public void OnReturnedToPool()
     {
+        if (this.gameObject.activeInHierarchy)
+        {
+            anim?.Rebind();
+            anim?.Update(0f);
+        }
+
         StopAllCoroutines();
 
         hp?.Reset();
         mesh?.Reset();
-
-        anim?.Rebind();
-        anim?.Update(0f);
 
         this.enabled = false;
     }

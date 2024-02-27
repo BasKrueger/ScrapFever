@@ -54,9 +54,9 @@ public class InstantSpawner : MonoBehaviour
         enemy.transform.position = spawnLocation.GetSpawnPoint(transform);
         enemy.transform.SetParent(transform);
 
-        if (preventAutoDestroy)
+        if (!preventAutoDestroy)
         {
-            enemy.StopAllCoroutines();
+            enemy.outOfScreen += (AbstractEnemy enemy) => { enemy.transform.position = spawnLocation.GetSpawnPoint(transform); };
         }
     }
 

@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class XPItem : AbstractItem
 {
+    const int MAXXPITEMS = 125;
+
     [Title("XpItem")]
     [SerializeField]
     private int value;
@@ -31,6 +33,7 @@ public class XPItem : AbstractItem
         {
             trail.enabled = false;
         }
+
         Pool.Return<XPItem>(this.gameObject);
     }
 
@@ -44,6 +47,12 @@ public class XPItem : AbstractItem
 
     protected override void InternalOnTakenfromPool()
     {
+        if(Pool.GetOutOfPoolCount<XPItem>() > MAXXPITEMS)
+        {
+            Pool.Return<XPItem>(this.gameObject);
+            return;
+        }
+
         if (trail == null)
         {
             trail = GetComponentInChildren<TrailRenderer>();

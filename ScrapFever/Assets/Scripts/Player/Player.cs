@@ -13,18 +13,23 @@ public class Player : MonoBehaviour, IDamageAble, IDamageSource
     #region Player Components
     [SerializeField, PropertyOrder(-3)]
     private PlayerMovement movement;
+
     [SerializeField, PropertyOrder(-2)]
     private PlayerWeapons weapons;
+
     private Rigidbody rb;
     #endregion
 
     #region Settings
     [SerializeField, FoldoutGroup("Settings")]
     private IntStat hp;
+
     [SerializeField, FoldoutGroup("Settings")]
     public int LevelUpHP;
+
     [SerializeField, FoldoutGroup("Settings")]
     private float debugStartLevel;
+
     [SerializeField, FoldoutGroup("Settings")]
     public List<int> xpUntilLevelUpHistory;
     #endregion
@@ -33,16 +38,20 @@ public class Player : MonoBehaviour, IDamageAble, IDamageSource
     #region Particles
     [SerializeField, FoldoutGroup("References")]
     private ParticleSystem damageParticles;
+
     [SerializeField, FoldoutGroup("References")]
     private ParticleSystem healParticles;
+
     [SerializeField, FoldoutGroup("References")]
     private ParticleSystem levelUpParticles;
+
     [SerializeField, FoldoutGroup("References")]
     private ParticleSystem deathVFX;
     #endregion
 
     [SerializeField, FoldoutGroup("References")]
     private Animator anim;
+
     private PlayerVignette vignette;
     private PlayerUI ui;
     private Healthbar healthbar;

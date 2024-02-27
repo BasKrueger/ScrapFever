@@ -9,17 +9,22 @@ public class PoolContent
 {
     [SerializeField, InfoBox("Object does not integrate Ipoolable", InfoMessageType.Error, "LegalToPool")]
     private GameObject objectToPool;
+
     [SerializeField]
     private int amount = 50;
+
     [SerializeField]
     private bool extendable = true;
+
     [field:SerializeField, HideInEditorMode]
     public int returnedCount { get; private set; } = 0;
 
     public List<GameObject> outOfPool { get; private set; } = new List<GameObject>();
 
-    public List<GameObject> inPool = new List<GameObject>();
+    private List<GameObject> inPool = new List<GameObject>();
+
     private GameObject poolHolder;
+
     private bool locked = false;
 
     private Dictionary<string, bool> isPooling = new Dictionary<string, bool>();

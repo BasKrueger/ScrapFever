@@ -7,7 +7,9 @@ using UnityEngine.Video;
 
 public class WeaponUpgradeCard : MonoBehaviour
 {
-    public event Action<WeaponUpgradeCard> selected;
+    public event Action<UpgradeInformation> selected;
+
+    UpgradeInformation toShow;
 
     [SerializeField, FoldoutGroup("References")]
     private Image Icon;
@@ -20,6 +22,21 @@ public class WeaponUpgradeCard : MonoBehaviour
 
     [SerializeField, FoldoutGroup("References")]
     private VideoPlayer player;
+
+
+    public void Show(UpgradeInformation info)
+    {
+        this.toShow = info;
+
+        if (info.isUpgrade)
+        {
+            ShowUpgrade(info.weapon);
+        }
+        else
+        {
+            ShowNewWeapon(info.weapon);
+        }
+    }
 
     public void ShowNewWeapon(AbstractWeapon weapon)
     {
@@ -64,6 +81,6 @@ public class WeaponUpgradeCard : MonoBehaviour
 
     public void OnClick()
     {
-        selected?.Invoke(this);
+        selected?.Invoke(toShow);
     }
 }

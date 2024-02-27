@@ -4,28 +4,37 @@ using UnityEngine;
 [System.Serializable]
 public class IntStat
 {
-    public int totalValue { get { return Mathf.RoundToInt(value * (1 + percentBonus)) + flatBonus; } set { } }
+    public int totalValue { get { return Mathf.RoundToInt(value * (1 + percentBonus)) + flatBonus; } }
 
-    [Title("Total Value"), ShowInInspector, HideInEditorMode, DisableInPlayMode, PropertyOrder(-1)]
+    [Title("Total Value")]
+    [ShowInInspector, HideInEditorMode, DisableInPlayMode, PropertyOrder(-1)]
     private int total { get { return totalValue; } }
 
     [Title("Settings")]
     [SerializeField, DisableInPlayMode]
     public int value;
+
+    [Title("Modifications")]
+    [HideInEditorMode, DisableInPlayMode]
+    public float percentBonus;
+
+    [HideInEditorMode, DisableInPlayMode]
+    public int flatBonus;
+
+
+
+
     [SerializeField, HideInPlayMode, OnValueChanged("SetDefaultCaps")]
     private bool capped;
 
     [Title("Caps")]
     [SerializeField, DisableInPlayMode, ShowIf("capped")]
     private int maxValue;
+
     [SerializeField, DisableInPlayMode, ShowIf("capped")]
     private int minValue;
 
-    [Title("Modifications")]
-    [HideInEditorMode, DisableInPlayMode]
-    public float percentBonus;
-    [HideInEditorMode, DisableInPlayMode]
-    public int flatBonus;
+  
 
     public IntStat(int value)
     {

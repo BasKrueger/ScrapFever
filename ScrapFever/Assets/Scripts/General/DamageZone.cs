@@ -1,5 +1,6 @@
 using Sirenix.OdinInspector;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -65,7 +66,7 @@ public class DamageZone : MonoBehaviour, IDamageSource
         
         if (stay)
         {
-            DamageWhileInRange(target);
+            StartCoroutine(DamageWhileInRange(target));
         }
 
         if (!collisionEnter) return;
@@ -89,18 +90,18 @@ public class DamageZone : MonoBehaviour, IDamageSource
         }
     }
 
-    private async void DamageWhileInRange(IDamageAble target)
+    private IEnumerator DamageWhileInRange(IDamageAble target)
     {
         inRange.Add(target);
 
         while (inRange.Contains(target) && this.enabled && this.gameObject.activeInHierarchy)
         {
-            await Task.Delay(Mathf.RoundToInt(cooldown * 1000));
+            yield return new WaitForSeconds(cooldown);
 
             if (target == null || target.gameObject == null || !target.gameObject.activeInHierarchy)
             {
                 inRange.Remove(target);
-                return;
+                yield break;
             }
 
             Hit(target);

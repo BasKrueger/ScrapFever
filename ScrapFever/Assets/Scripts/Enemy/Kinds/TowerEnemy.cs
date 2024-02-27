@@ -1,5 +1,6 @@
 using Sirenix.OdinInspector;
 using System.Collections;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class TowerEnemy : AbstractEnemy
@@ -27,7 +28,7 @@ public class TowerEnemy : AbstractEnemy
         body.isKinematic = true;
 
         yield return new WaitForSeconds(delay);
-
+        
         if (Application.isPlaying)
         {
             base.hp += bonusHealth / 2;
