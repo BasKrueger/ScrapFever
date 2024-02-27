@@ -13,7 +13,7 @@ Scrap Fever is a futuristic Survivor-Like set in a magma cave where runs only la
 Features include:
   - 10 different weapons
   - 3 Bosses with unique mechanics
-  - 72 Achievments
+  - 72 Achievements
   - multi-language support
 
 # How to run
